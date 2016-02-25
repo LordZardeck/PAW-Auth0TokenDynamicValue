@@ -30,7 +30,7 @@ Auth0Token.identifier = "io.blackcode.Auth0Token";
 Auth0Token.title = "Auth0 Authorization Token";
 
 // link to the Dynamic Value documentation
-Auth0Token.help = "https://Auth0.com";
+Auth0Token.help = "https://github.com/LordZardeck/PAW-Auth0TokenDynamicValue";
 
 Auth0Token.inputs = [
 	DynamicValueInput("issuer", "Issuer", "String"),
