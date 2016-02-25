@@ -27,7 +27,7 @@ var Auth0Token = function() {
 Auth0Token.identifier = "io.blackcode.Auth0Token";
 
 // give a display name to your Dynamic Value
-Auth0Token.title = "Auth0 Authorization Token Generator";
+Auth0Token.title = "Auth0 Authorization Token";
 
 // link to the Dynamic Value documentation
 Auth0Token.help = "https://Auth0.com";

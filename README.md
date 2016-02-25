@@ -14,4 +14,4 @@ You will also need your account's issuer, typically, `https://<accountName>.auth
 
 Finally, to login as a specific user, you will need their `userId` and thier `email`
 
-To utlize the token, create a header, and as the value, use `Auth0 Authorization Token Generator`
+To utlize the token, create a header, and as the value, use `Auth0 Authorization Token`
