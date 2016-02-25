@@ -37,7 +37,7 @@ Auth0Token.inputs = [
 	DynamicValueInput("userId", "User Id", "String"),
 	DynamicValueInput("email", "User Email", "String"),
 	DynamicValueInput("clientId", "Client ID", "String"),
-	DynamicValueInput("clientSecret", "Client Secret", "String")
+	DynamicValueInput("clientSecret", "Client Secret", "SecureValue")
 ]
 
 registerDynamicValueClass(Auth0Token);
