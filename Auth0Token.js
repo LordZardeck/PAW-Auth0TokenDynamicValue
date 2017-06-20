@@ -17,10 +17,12 @@ var Auth0Token = function() {
         exp: now + 60 * 60 * 24 * 7,
         iat: now
       };
+    secret = this.base64encoded
+      ? { b64: jsrassign.b64utob64(this.clientSecret) }
+      : this.clientSecret;
 
     return (
-      "Bearer " +
-      jsrassign.jws.JWS.sign(null, headerInput, bodyInput, this.clientSecret)
+      "Bearer " + jsrassign.jws.JWS.sign(null, headerInput, bodyInput, secret)
     );
   };
 };
@@ -39,7 +41,8 @@ Auth0Token.inputs = [
   DynamicValueInput("userId", "User Id", "String"),
   DynamicValueInput("email", "User Email", "String"),
   DynamicValueInput("clientId", "Client ID", "String"),
-  DynamicValueInput("clientSecret", "Client Secret", "SecureValue")
+  DynamicValueInput("clientSecret", "Client Secret", "SecureValue"),
+  DynamicValueInput("base64encoded", "Secret Base64 Encoded?", "Checkbox")
 ];
 
 registerDynamicValueClass(Auth0Token);
