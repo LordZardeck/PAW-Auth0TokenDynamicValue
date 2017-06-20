@@ -8,10 +8,10 @@ This project was created to help simplify testing our API with paw, authenticati
 
 You will need your app's `clientId` and `clientSecret` in order to sign the token properly. You can get these from your dashboard.
 
-You will also need your account's issuer, typically, `https://<accountName>.auth0.com/`. 
+You will also need your account's issuer, typically, `https://<accountName>.auth0.com/`.
 
-> **IMPORTANT:** You _**MUST**_ include a trailing `/` in the issuer or it will not be valid
+> The trailing slash `/` in the issuer may be required, depending on your setup
 
-Finally, to login as a specific user, you will need their `userId` and thier `email`
+Finally, to login as a specific user, you will need their `userId` (`email` is optional).
 
-To utlize the token, create a header, and as the value, use `Auth0 Authorization Token`
+To utilize the token, create a header, and as the value, use `Auth0 Authorization Token`
