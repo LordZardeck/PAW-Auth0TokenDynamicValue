@@ -42,12 +42,12 @@ Auth0Token.title = "Auth0 Authorization Token";
 Auth0Token.help = "https://github.com/LordZardeck/PAW-Auth0TokenDynamicValue";
 
 Auth0Token.inputs = [
-  DynamicValueInput("issuer", "Issuer", "String"),
-  DynamicValueInput("userId", "User Id", "String"),
-  DynamicValueInput("email", "User Email", "String"),
-  DynamicValueInput("clientId", "Client ID", "String"),
-  DynamicValueInput("clientSecret", "Client Secret", "SecureValue"),
-  DynamicValueInput("base64encoded", "Secret Base64 Encoded?", "Checkbox")
+  InputField("issuer", "Issuer", "String"),
+  InputField("userId", "User Id", "String"),
+  InputField("email", "User Email", "String"),
+  InputField("clientId", "Client ID", "String"),
+  InputField("clientSecret", "Client Secret", "SecureValue"),
+  InputField("base64encoded", "Secret Base64 Encoded?", "Checkbox")
 ];
 
 registerDynamicValueClass(Auth0Token);
