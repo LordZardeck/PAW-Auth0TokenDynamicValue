@@ -12,7 +12,7 @@ var Auth0Token = function() {
       bodyInput = {
         email: this.email,
         iss: this.issuer,
-        sub: "auth0|" + this.userId,
+        sub: this.userId,
         aud: this.clientId,
         exp: now + 60 * 60 * 24 * 7,
         iat: now
@@ -20,6 +20,11 @@ var Auth0Token = function() {
     secret = this.base64encoded
       ? { b64: jsrassign.b64utob64(this.clientSecret) }
       : this.clientSecret;
+
+    // provider should be included in userId, but assume auth0 if not
+    if (bodyInput.sub.split("|").length === 1) {
+      bodyInput.sub = "auth0|" + bodyInput.sub;
+    }
 
     return (
       "Bearer " + jsrassign.jws.JWS.sign(null, headerInput, bodyInput, secret)

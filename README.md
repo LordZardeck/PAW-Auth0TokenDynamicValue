@@ -12,6 +12,6 @@ You will also need your account's issuer, typically, `https://<accountName>.auth
 
 > The trailing slash `/` in the issuer may be required, depending on your setup
 
-Finally, to login as a specific user, you will need their `userId` (`email` is optional).
+Finally, to login as a specific user, you will need their `userId` (`email` is optional). The provider portion of the `userId` should be included.
 
 To utilize the token, create a header, and as the value, use `Auth0 Authorization Token`
